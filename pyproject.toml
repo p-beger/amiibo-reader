@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Python library for reading amiibo tags using an MFRC522 NFC reader on Raspberry Pi"
 requires-python = ">=3.13"
 dependencies = [
-    "mfrc522",
+    "mfrc522-python==0.0.9",
 ]
 
 [dependency-groups]
