@@ -1,17 +1,39 @@
-from mfrc522 import MFRC522  # type: ignore[import-untyped]
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from .amiibo import Amiibo
 from .amiibos import AMIIBOS
 from .unknown_tag import UnknownTag
 
-reader = MFRC522(bus=0, device=0, spd=1000000, pin_mode=10, pin_rst=22)
+if TYPE_CHECKING:
+    from mfrc522 import MFRC522  # type: ignore[import-untyped]
+
+reader: MFRC522 | None = None
+
+
+def _get_reader() -> MFRC522:
+    global reader
+
+    if reader is None:
+        from mfrc522 import MFRC522  # type: ignore[import-untyped]
+
+        reader = MFRC522(bus=0, device=0, spd=1000000, pin_mode=10, pin_rst=22)
+
+    return reader
 
 
 def close_reader() -> None:
-    reader.Close()
+    global reader
+
+    if reader is not None:
+        reader.Close()
+        reader = None
 
 
 def _read_ntag_page(page: int) -> list[int] | None:
+    reader = _get_reader()
+
     command = [0x30, page]
 
     crc = reader.CalulateCRC(command)
@@ -35,6 +57,8 @@ def _anticoll_level(level: int) -> list[int] | None:
     level 1 = 0x93
     level 2 = 0x95
     """
+
+    reader = _get_reader()
 
     command = [level, 0x20]
 
@@ -66,6 +90,8 @@ def _select_level(level: int, uid_part: list[int]) -> bool:
     - level 1: 88 + 3 bytes UID + BCC
     - level 2: 4 bytes UID + BCC
     """
+
+    reader = _get_reader()
 
     command = [
         level,
@@ -126,6 +152,8 @@ def read_tag() -> Amiibo | UnknownTag | None:
     Read a tag and return the corresponding Amiibo object if recognized,
     otherwise return an UnknownTag object. Returns None if no tag is detected.
     """
+
+    reader = _get_reader()
 
     status, _ = reader.Request(reader.PICC_REQIDL)
 
