@@ -13,6 +13,9 @@ AMIIBOS: dict[str, Amiibo] = {
     # Diablo
     # Not implemented yet
     #
+    # Donkey Kong Bananza
+    "00080100042F1A02": Amiibo("00080100042F1A02", AmiiboSeries.DONKEY_KONG_BANANZA, "Donkey Kong and Pauline"),
+    #
     # Fire Emblem
     # Not implemented yet
     #
@@ -35,10 +38,18 @@ AMIIBOS: dict[str, Amiibo] = {
     # Not implemented yet
     #
     # Splatoon
-    # Not implemented yet
+    "0800010003690402": Amiibo("0800010003690402", AmiiboSeries.SPLATOON, "Inkling Girl (Neon Pink)"),
+    "08010000025D0402": Amiibo("08010000025D0402", AmiiboSeries.SPLATOON, "Callie"),
+    "08020000025E0402": Amiibo("08020000025E0402", AmiiboSeries.SPLATOON, "Marie"),
+    "0800030000400402": Amiibo("0800030000400402", AmiiboSeries.SPLATOON, "Inkling Squid"),
+    "08000100003E0402": Amiibo("08000100003E0402", AmiiboSeries.SPLATOON, "Inkling Girl"),
+    "08000200003F0402": Amiibo("08000200003F0402", AmiiboSeries.SPLATOON, "Inkling Boy"),
+    "08000300036B0402": Amiibo("08000300036B0402", AmiiboSeries.SPLATOON, "Inkling Squid (Neon Purple)"),
     #
     # Super Mario
-    # Not implemented yet
+    "0000000003710102": Amiibo("0000000003710102", AmiiboSeries.SUPER_MARIO, "Mario (Wedding Outfit)"),
+    "0002000003720102": Amiibo("0002000003720102", AmiiboSeries.SUPER_MARIO, "Peach (Wedding Outfit)"),
+    "0005000003730102": Amiibo("0005000003730102", AmiiboSeries.SUPER_MARIO, "Bowser (Wedding Outfit)"),
     #
     # Super Mario 30th
     # Not implemented yet
@@ -90,18 +101,28 @@ AMIIBOS: dict[str, Amiibo] = {
     "06400100001E0002": Amiibo("06400100001E0002", AmiiboSeries.SUPER_SMASH_BROS, "Olimar"),
     #
     # The Legend of Zelda
-    # Not implemented yet
+    "0101030004140902": Amiibo("0101030004140902", AmiiboSeries.THE_LEGEND_OF_ZELDA, "Zelda and Loftwing"),
+    "01000000034E0902": Amiibo("01000000034E0902", AmiiboSeries.THE_LEGEND_OF_ZELDA, "Link (Skyward Sword)"),
+    "01030000024F0902": Amiibo("01030000024F0902", AmiiboSeries.THE_LEGEND_OF_ZELDA, "Wolf Link"),
     #
     # The Legend of Zelda 30th
-    # Not implemented yet
+    "0100010003500902": Amiibo("0100010003500902", AmiiboSeries.THE_LEGEND_OF_ZELDA_30TH, "Link (The Wind Waker)"),
+    "0101000003520902": Amiibo("0101000003520902", AmiiboSeries.THE_LEGEND_OF_ZELDA_30TH, "Zelda (The Wind Waker)"),
+    "01000000034B0902": Amiibo("01000000034B0902", AmiiboSeries.THE_LEGEND_OF_ZELDA_30TH, "Link (Ocarina of Time)"),
+    "01000000034F0902": Amiibo("01000000034F0902", AmiiboSeries.THE_LEGEND_OF_ZELDA_30TH, "Link (The Legend of Zelda)"),
     #
     # The Legend of Zelda: Breath of the Wild
-    # Not implemented yet
+    "01410000035C0902": Amiibo("01410000035C0902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Bokoblin"),
+    "0140000003550902": Amiibo("0140000003550902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Guardian"),
+    "0100000003530902": Amiibo("0100000003530902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Link (Archer)"),
+    "0101000003560902": Amiibo("0101000003560902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Zelda"),
+    "0105000003580902": Amiibo("0105000003580902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Daruk"),
+    "0106000003590902": Amiibo("0106000003590902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Urbosa"),
+    "01070000035A0902": Amiibo("01070000035A0902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Mipha"),
+    "01080000035B0902": Amiibo("01080000035B0902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Revali"),
+    "0100000003540902": Amiibo("0100000003540902", AmiiboSeries.THE_LEGEND_OF_ZELDA_BOTW, "Link (Rider)"),
     #
     # The Legend of Zelda: Link's Awakening
-    # Not implemented yet
-    #
-    # The Legend of Zelda: Skyward Sword
     # Not implemented yet
     #
     # The Legend of Zelda: Tears of the Kingdom

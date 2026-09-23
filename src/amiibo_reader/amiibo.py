@@ -7,6 +7,7 @@ class AmiiboSeries(StrEnum):
     DARK_SOULS = "Dark Souls"
     DETECTIVE_PIKACHU = "Detective Pikachu"
     DIABLO = "Diablo"
+    DONKEY_KONG_BANANZA = "Donkey Kong Bananza"
     FIRE_EMBLEM = "Fire Emblem"
     KIRBY = "Kirby"
     MEGA_MAN = "Mega Man"
