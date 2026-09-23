@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "amiibo-reader"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     {name = "Pascal Béger" }
 ]
@@ -27,6 +27,9 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+amiibo_reader = ["py.typed"]
 
 [tool.ruff]
 line-length = 120
