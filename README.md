@@ -4,6 +4,8 @@ Python library for reading amiibo tags with an MFRC522 RFID reader.
 
 The library detects NFC tags, reads amiibo data from NTAG215 tags, and identifies amiibo figures using a local amiibo database.
 
+`amiibo-reader` is an independant Python library for reading and parsing NFC data from amiibo tags. It is not affiliated with or endorsed by Nintendo.
+
 ## Features
 
 - Read amiibo tags using an MFRC522 RFID reader

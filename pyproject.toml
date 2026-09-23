@@ -5,11 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "amiibo-reader"
 version = "0.1.0"
+authors = [
+    {name = "Pascal Béger" }
+]
 description = "Python library for reading amiibo tags using an MFRC522 NFC reader on Raspberry Pi"
+readme = "README.md"
 requires-python = ">=3.13"
+license = { text = "MIT" }
 dependencies = [
     "mfrc522-python==0.0.9",
 ]
+
+[project.urls]
+Homepage = "https://github.com/p-beger/amiibo-reader"
 
 [dependency-groups]
 dev = [
